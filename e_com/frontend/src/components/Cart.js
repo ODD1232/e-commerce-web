@@ -38,7 +38,7 @@ export default function Cart() {
                 <CardMedia
                   component="img"
                   height="140"
-                  image={item.product.image.startsWith("http") ? item.product.image : `http://localhost:8000${item.product.image}`}
+                  image={item.product.image.startsWith("http") ? item.product.image : `${(process.env.REACT_APP_API_BASE_URL || "http://localhost:8000").replace(/\/$/, "")}${item.product.image}`}
                   alt={item.product.name}
                 />
               )}

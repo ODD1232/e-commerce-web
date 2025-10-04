@@ -23,7 +23,7 @@ export default function ProductList({ onAddToCart }) {
               {p.image && (
                 <CardMedia
                   component="img"
-                  image={p.image.startsWith("http") ? p.image : `http://localhost:8000${p.image}`}
+                  image={p.image.startsWith("http") ? p.image : `${(process.env.REACT_APP_API_BASE_URL || "http://localhost:8000").replace(/\/$/, "")}${p.image}`}
                   alt={p.name}
                   sx={{
                     width: "100%",
