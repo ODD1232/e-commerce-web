@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:8000/api"; // Change as per backend URL
+const API_BASE_URL = (process.env.REACT_APP_API_BASE_URL || "http://localhost:8000").replace(/\/$/, "") + "/api";
 
 export async function registerUser(userData) {
   const response = await fetch(`${API_BASE_URL}/register/`, {
