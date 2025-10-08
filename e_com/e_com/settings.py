@@ -84,8 +84,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-MEDIA_URL='/media/'   #added by me
-MEDIA_ROOT=BASE_DIR/'media'  #added by me 
+MEDIA_URL='/media/'   
+MEDIA_ROOT=BASE_DIR/'media'  
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
